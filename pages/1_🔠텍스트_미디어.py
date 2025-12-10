@@ -17,3 +17,16 @@ st.write('')    # 빈 줄 추가
 '# 🔠: 색상이 있는 텍스트'
 st.write(':red[빨간색 텍스트]')
 st.write(':blue[파란색 텍스트]')
+
+'### 코드 블록: st.code()'
+st.code('print("Hello, World!")', language='python', line_numbers=True)
+
+'### 코드 + 결과: st.echo()'
+with st.echo():
+    name = 'habao'
+    st.write("Hello, Streamlit!", name)
+
+'### Latex 수식 작성: st.latex()'
+st.latex(r'\int_a^b f(x)dx')
+
+st.divider()
