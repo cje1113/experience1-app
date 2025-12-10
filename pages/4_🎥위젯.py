@@ -71,3 +71,18 @@ st.link_button('갤러리 링크', 'https://streamlit.io/gallery')
 '### :orange[멀티 셀렉트 박스]'
 multi = st.multiselect('여기에서 여러 값을 선택하세요', ['선택1', '선택2', '선택 3'])
 st.write(f'{type(multi) = }, {multi}가 선택됐습니다.')
+
+# 슬라이더는 선택된 값 반환
+'### :orange[슬라이더]'
+slider = st.slider('여기에서 값을 선택하세요', 0, 100, 50)  # slider('', 최소, 최대, 초기)
+st.write(f'현재의 값은 {slider} 입니다.')
+
+# 선택 슬라이더는 선택된 값 반환
+'### :orange[선택 슬라이더]'
+range_slider = st.select_slider('여기에서 값을 선택하세요', options=range(101), value=(25,75))
+st.write(f'현재의 값은 {range_slider} 입니다.')
+
+# 컬러피커는 선택된 값을 반환
+'### :orange[컬러 피커]'
+color = st.color_picker('색을 선택하세요', '#00f900')
+st.write(f'선택된 색은 {color} 입니다.')
