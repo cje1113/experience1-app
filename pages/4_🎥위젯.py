@@ -67,3 +67,7 @@ if selected is not None:
 
 '### :orange[링크 버튼: st.link_button()]'
 st.link_button('갤러리 링크', 'https://streamlit.io/gallery')
+
+'### :orange[멀티 셀렉트 박스]'
+multi = st.multiselect('여기에서 여러 값을 선택하세요', ['선택1', '선택2', '선택 3'])
+st.write(f'{type(multi) = }, {multi}가 선택됐습니다.')
