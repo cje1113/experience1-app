@@ -24,5 +24,21 @@ chart_data = pd.DataFrame(
     columns=['a','b','c']
 )
 
-'### :orange[st.area_chart()]'
+'#### :orange[st.area_chart()]'
 st.area_chart(chart_data)
+
+'#### :orange[st.line_chart()]'
+st.line_chart(chart_data)
+
+'#### :orange[st.bar_chart()]'
+st.bar_chart(chart_data)
+
+'#### :orange[st.scatter_chart()]'
+st.scatter_chart(chart_data)
+
+'#### :orange[st.map()]'
+df = pd.DataFrame(
+    np.random.randn(100,2) / [100,100] + [37.55, 126.92],
+    columns=['lat','log']
+)
+st.map(df)
