@@ -92,7 +92,7 @@ import time
 '### :orange[프로그레스 바]'
 button1 = st.button('실시') # 버튼 클릭 여부 반환
 if button1:
-    progress = st.progress
+    progress = st.progress(0)
     for i in range(101):
         progress.progress(i)
         if i % 20 == 0:
