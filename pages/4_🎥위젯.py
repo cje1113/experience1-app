@@ -33,3 +33,37 @@ if file:
     with open(file_path, 'wb') as f:    # 'wb': 바이너리 쓰기 모드 => 파일을 텍스트가 아니라 ‘순수한 0과 1의 데이터’ 그대로 저장
         f.write(file.getbuffer())   # file.getbuffer(): 이 파일의 내용을 바이트 단위 그대로 가져오는 함수
     st.success(f'파일이 저장되었습니다: {file_path}')
+
+'# 🏋️ :blue[버튼]'
+
+'### :orange[기본 버튼: st.button()]'
+button = st.button('일반 버튼')
+if button:
+    st.write('버튼이 클릭되었습니다.')
+
+primary_button = st.button('주요 버튼', type='primary')
+if primary_button:
+    st.write('주요 버튼이 클릭됐습니다.')
+
+'### :orange[다운로드 버튼: st.download_button()]'
+with open("./data/mysql.png", 'rb') as file:
+    st.download_button(
+        label = '이미지 파일 다운로드',
+        data = file,
+        file_name = 'image.png',
+        mime = 'image/png'
+    )
+
+'### :orange[피드백 버튼: st.feedback()]'
+sentiment_mapping = ['one', 'two', 'three', 'five']
+selected = st.feedback('stars')
+if selected is not None:
+    st.markdown(f'당신은 {sentiment_mapping[selected]} star(s)을 선택했습니다.')
+
+sentiment_mapping = [':material/thumb_down:', ':material/thumb_up:']
+selected = st.feedback('thumbs')
+if selected is not None:
+    st.markdown(f'당신은 {sentiment_mapping[selected]}을 선택했습니다.')
+
+'### :orange[링크 버튼: st.link_button()]'
+st.link_button('갤러리 링크', 'https://streamlit.io/gallery')
