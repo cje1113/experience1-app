@@ -66,3 +66,17 @@ st.write('st.audio()')
 
 '### :orange[동영상: st.video()]'
 st.video('https://www.youtube.com/watch?v=dQw4w9WgXcQ')
+
+'# 📚: 콜아웃'
+
+'### :orange[정보: st.info()]'
+st.info('This is a purely informational message', icon = 'ℹ️')
+
+'### :orange[경고: st.warning()]'
+st.warning('This is a warning message', icon='⚠️')
+
+'### :orange[에러: st.error()]'
+st.error('This is an error message', icon='🚫')
+
+'### :orange[성공: st.success()]'
+st.success('This is a success message', icon='✅')
