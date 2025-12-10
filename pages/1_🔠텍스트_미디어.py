@@ -56,3 +56,13 @@ def hello_world():
     print("Hello, World!")
 ```
 '''
+
+'# 🎥: 미디어 삽입'
+'### :orange[이미지: st.image()]'
+st.image("./data/mysql.png", caption='mysql 로고', use_container_width=True)    # True → 이미지가 컨테이너 폭에 맞게 자동으로 조절됨 / False(기본값) → 이미지 원본 크기 그대로 표시됨
+
+'### :orange[오디오: st.audio()]'
+st.write('st.audio()')
+
+'### :orange[동영상: st.video()]'
+st.video('https://www.youtube.com/watch?v=dQw4w9WgXcQ')
