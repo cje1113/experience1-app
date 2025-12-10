@@ -38,7 +38,21 @@ st.scatter_chart(chart_data)
 
 '#### :orange[st.map()]'
 df = pd.DataFrame(
+    # 서울(37.55, 126.92) 근처에 랜덤한 100개의 작은 점(좌표)을 생성
     np.random.randn(100,2) / [100,100] + [37.55, 126.92],
     columns=['lat','lon']
 )
 st.map(df)
+
+'### :orange[Matplotlib: st.pyplot()]'
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.linspace(0, 10, 100) # 0부터 10까지를 100등분한 연속 값(1차원 배열)을 만듦
+y = np.sin(x)
+
+fig, ax = plt.subplots()
+ax.plot(x, y)
+st.pyplot(fig)  # 차트 풀력
+
+st.divider()
