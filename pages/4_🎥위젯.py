@@ -91,7 +91,7 @@ st.write(f'선택된 색은 {color} 입니다.')
 import time
 '### :orange[프로그레스 바]'
 button1 = st.button('실시') # 버튼 클릭 여부 반환
-if button:
+if button1:
     progress = st.progress
     for i in range(101):
         progress.progress(i)
