@@ -77,3 +77,13 @@ c = (
 )
 
 st.altair_chart(c, use_container_width=True)
+
+'### :orange[Plotly: st.plotly_chart()]'
+import plotly.express as px
+
+df = px.data.iris()
+fig = px.scatter(df, x='sepal_width', y='sepal_length')
+
+# key: 고유 이름 => rerun 시에도 값이 변하지 않음
+# on_select = 'rerun': 데이터 포인트 선택시 스트림릿 앱 다시 실행
+st.plotly_chart(fig, key='iris', on_select='rerun')
