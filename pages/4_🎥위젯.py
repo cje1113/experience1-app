@@ -98,3 +98,11 @@ if button:
         if i % 20 == 0:
             st.write(f'진행 상태: {i}%')
         time.sleep(0.05)
+
+# spinner는 진행 상태 반환
+'### :orange[스피너]'
+button2 = st.button('로드')
+if button2:
+    with st.spinner('로딩 중입니다...'):
+        time.sleep(3)
+        st.success('로딩 완료!')
