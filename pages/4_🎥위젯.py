@@ -86,3 +86,15 @@ st.write(f'현재의 값은 {range_slider} 입니다.')
 '### :orange[컬러 피커]'
 color = st.color_picker('색을 선택하세요', '#00f900')
 st.write(f'선택된 색은 {color} 입니다.')
+
+# 프로그레스 바는 진행상태 반환
+import time
+'### :orange[프로그레스 바]'
+button1 = st.button('실시') # 버튼 클릭 여부 반환
+if button:
+    progress = st.progress
+    for i in range(101):
+        progress.progress(i)
+        if i % 20 == 0:
+            st.write(f'진행 상태: {i}%')
+        time.sleep(0.05)
