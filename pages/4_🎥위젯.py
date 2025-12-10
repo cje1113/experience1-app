@@ -106,3 +106,13 @@ if button2:
     with st.spinner('로딩 중입니다...'):
         time.sleep(3)
         st.success('로딩 완료!')
+
+'### :orange[풍선 애니메이션]'
+button4 = st.button('풍선을 띄워보세요')
+if button4:
+    st.balloons()
+
+'### :orange[눈 애니메이션]'
+button5 = st.button('눈을 내려보세요')
+if button5:
+    st.snow()
