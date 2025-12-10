@@ -55,7 +55,7 @@ with open("./data/mysql.png", 'rb') as file:
     )
 
 '### :orange[피드백 버튼: st.feedback()]'
-sentiment_mapping = ['one', 'two', 'three', 'five']
+sentiment_mapping = ['one', 'two', 'three', 'four', 'five']
 selected = st.feedback('stars')
 if selected is not None:
     st.markdown(f'당신은 {sentiment_mapping[selected]} star(s)을 선택했습니다.')
