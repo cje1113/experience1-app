@@ -25,7 +25,10 @@ st.divider()
 st.scatter_chart(df, x='x', y='y', color=color1)
 
 if 'df' not in st.session_state:
-    st.session_state.df = pd.DataFrame(np.random.randn(20,2) columns=['x','y'])
+    st.session_state.df = pd.DataFrame(np.random.randn(20,2), columns=['x','y'])
 
 st.write("#### :orange[session_state를 사용한 경우]")
-color2 = st.color_picker('Color2')
+color2 = st.color_picker('Color2', '#FF0000')
+st.divider()
+st.scatter_chart(st.session_state.df, x='x', y='y', color=color2)
+st.write('🚀 :green[session_state를 사용하면 저장된 state를 사용하므로 값이 고정됨]')
