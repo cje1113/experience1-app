@@ -61,3 +61,8 @@ tab_3.write(
     ```
     '''
 )
+
+'### :orange[확장 레이아웃: st.expander()]'
+with st.expander('🔍 확장 레이아웃'):
+    st.write('이곳은 확장 레이아웃입니다.')
+    st.write('확장 레이아웃은 특정 컨텐츠를 숨기거나 보여줄 때 사용됩니다.')
